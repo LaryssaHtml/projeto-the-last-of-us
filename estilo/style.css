@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Ellie';
+    src: url(../fontes/The\ Last\ Of\ Us\ Rough.ttf) format('truetype');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+
+ body{ 
+    height: 100vh; /* 100% da Viewport*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2b3e33;
+    background-image: url(../imagens/ellie-1920.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*modificar*/ 
+}
+
+div#img01{
+    background-image: url(../imagens/ellie-violao.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div#img02{
+    background-image: url(../imagens/ellie-window.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div#img03{
+    background-image: url(../imagens/ellie-22.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div.video{
+    margin: 0px 2px 0px 0px;
+    padding: 20px; 
+    padding-bottom: 56%; 
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 7%;
+    left: 21%;
+    width: 60%;
+    height: 60%;
+    
+}
+
+nav{
+    margin-top: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-end; /*Modificar dps*/
+    align-items: center;
+    padding: 10px;
+}
+
+nav > a{
+      padding: 20px;
+      margin: 5px;
+      color: white;
+      text-decoration: none;
+}
+
+nav > a:hover{
+    background-color: #8f2220;
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    transition-duration: 0.8s;
+}
+
+
+
+.signup-login{
+    color: white;
+   
+}
+
+.signup-login:hover{
+    color: rgba(160, 159, 159, 0.877);
+    background-color: rgba(0, 0, 0, 0.719);
+    
+}
+
+main{
+    padding-top: 30px;
+}
+
+h1{
+    padding-left: 20px;
+    line-height: 0.9em;
+    
+}
+
+h2{
+    font-family: 'Ellie';
+    font-weight: normal;
+    font-size: 4.8em;
+    text-align: center;
+    color: white;
+    padding-top: 7%;
+}
+
+.imagem-direita{
+    display: block;
+    margin: auto;
+    padding-left: 50%;
+}
+
+strong{
+    font-weight: bolder;
+    color: #317302;
+    
+}
+
+main > h1{
+    font-family: 'Ellie', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 7em;
+    color: rgb(255, 255, 255);
+    margin: 146px 7px 0px 9px;
+    margin-bottom: 0px;
+    
+    
+}
+p{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    text-align: justify;
+    line-height: 1.3em;
+    width: 400px;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.principal{
+    color: white;
+    text-align: justify;
+    text-indent: 10px;
+    padding: 3px 12px 22px 39px;
+    margin: 13px;
+    margin-top: 0px;
+    white-space: pre-line;
+    line-height: 1.1em;
+    
+}
+
+span{
+    color: rgb(250, 26, 19);
+    font-weight: bold;    
+}
+
+.parte{
+    font-weight: normal;
+    color: white;
+    padding-left: 2em;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  28px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin: 15px 0px 0px 8%;
+    border-radius: 10px;
+    transition: 1s;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 12%;
+    cursor: pointer;
+}    
+
+button:hover{
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.808);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+article{
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.521);
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 40px 10px rgba(18, 70, 5, 0.151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+}
+
+
+ footer > p > a:hover{
+       text-decoration: underline;
+       background-color: rgba(40, 173, 40, 0.76);
+ }
+
+ .p-rodape{
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+ }
+
+
