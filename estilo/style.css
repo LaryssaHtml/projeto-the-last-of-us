@@ -8,6 +8,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
  
 
@@ -20,7 +21,22 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed; /*modificar*/ 
+    
 }
+
+html{
+    scroll-behavior: smooth;
+ }
+
+ .scroll-to-top {
+    right: 50px; /* Distância da direita */
+}
+
+.scroll-to-top img {
+    width: 70px; 
+    height: auto; 
+}
+
 
 div#img01{
     background-image: url(../imagens/ellie-violao.jpg);
@@ -43,29 +59,36 @@ div#img03{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
 }
 
 div.video{
-    margin: 0px 2px 0px 0px;
-    padding: 20px; 
-    padding-bottom: 56%; 
+    margin: 0 auto; /* Centraliza a div do vídeo */ 
     position: relative;
+    width: 100%; /* Ajusta a largura para 100% do container */
+    max-width: 800px; /* Define uma largura máxima para o vídeo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+    overflow: hidden; /* Garante que nada ultrapasse os limites da div */
+    
 }
 
 div.video > iframe{
-    position: absolute;
-    top: 7%;
-    left: 21%;
-    width: 60%;
-    height: 60%;
-    
+    position: absolute; /* Posiciona o iframe absolutamente */
+    top: 0;
+    left: 0;
+    width: 100%; /* Define a largura para 100% */
+    height: 100%; /* Define a altura para 100% */
+    border: none; /* Remove a borda do iframe, se houver */
+    display: block;
 }
+
+
 
 nav{
     margin-top: 20px;
     font-weight: bolder;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end; /*Modificar dps*/
     align-items: center;
     padding: 10px;
@@ -76,13 +99,15 @@ nav > a{
       margin: 5px;
       color: white;
       text-decoration: none;
+      transition: transform 0.2s ease;
 }
 
 nav > a:hover{
     background-color: #8f2220;
     color: rgb(0, 0, 0);
-    border-radius: 6px;
+    border-radius: 15px;          /*EDITE AQUI*/
     transition-duration: 0.8s;
+    transform: scale(1.1);
 }
 
 
@@ -93,34 +118,41 @@ nav > a:hover{
 }
 
 .signup-login:hover{
-    color: rgba(160, 159, 159, 0.877);
+    color: rgba(182, 181, 181, 0.877);
     background-color: rgba(0, 0, 0, 0.719);
     
 }
 
-main{
-    padding-top: 30px;
+.aviso-teste-topo p{
+    font-size: small;
+    font-weight: bolder;
+    color: rgba(235, 227, 219, 0.336);
+    text-align: justify;
+    padding: 0 20px 20px;
+    margin: 0;
+
 }
+
 
 h1{
-    padding-left: 20px;
-    line-height: 0.9em;
-    
+    line-height: 0.9em; 
+    text-shadow: 7px 5px 4px  rgba(0, 0, 0, 0.541);
 }
 
-h2{
+section h2{
     font-family: 'Ellie';
     font-weight: normal;
     font-size: 4.8em;
     text-align: center;
+    text-shadow: 7px 5px 4px  rgba(0, 0, 0, 0.541);
     color: white;
-    padding-top: 7%;
+    padding-top: 5%;
+    white-space: nowrap;
 }
 
 .imagem-direita{
-    display: block;
-    margin: auto;
-    padding-left: 50%;
+    max-width: 100%; 
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 strong{
@@ -129,33 +161,32 @@ strong{
     
 }
 
-main > h1{
+main{
+     padding: 7px; 
+}
+
+section > h1{
     font-family: 'Ellie', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 7em;
+    font-size: 5em;
     color: rgb(255, 255, 255);
-    margin: 146px 7px 0px 9px;
-    margin-bottom: 0px;
-    
-    
+    padding: 16px 23px 0px;
 }
+
 p{
     color: white;
     font-size: 1.2em;
-    text-align: center;
     text-align: justify;
     line-height: 1.3em;
-    width: 400px;
-    padding-top: 30px;
-    padding-left: 40px;
+    padding: 20px 20px;
+    max-width: 530px;
 }
 
 .principal{
     color: white;
     text-align: justify;
     text-indent: 10px;
-    padding: 3px 12px 22px 39px;
-    margin: 13px;
+    padding: 0px 13px 22px 19px;
     margin-top: 0px;
     white-space: pre-line;
     line-height: 1.1em;
@@ -163,32 +194,30 @@ p{
 }
 
 span{
-    color: rgb(250, 26, 19);
-    font-weight: bold;    
+    color: rgb(209, 45, 39);
+    font-weight: bold;   
 }
 
-.parte{
-    font-weight: normal;
-    color: white;
-    padding-left: 2em;
-}
+
 
 button{
     font-family: Arial, Helvetica, sans-serif;
-    font-size:  28px;
+    font-size:  1.5em;
     background-color: rgb(0, 0, 0);
     color: white;
-    margin: 15px 0px 0px 8%;
+    margin-left: 4%;
     border-radius: 10px;
     transition: 1s;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 12%;
+    padding: 10px 20px;
     cursor: pointer;
+    display: block; 
+    transition: transform 0.3s ease;
 }    
 
 button:hover{
-    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.808);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.692);
+    transform: scale(1.2);
+    color: #ffffff;
 }
 
 a{
@@ -197,21 +226,19 @@ a{
 }
 
 article{
-    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.521);
+    padding-top: 80px;
 }
 
 
 footer{
     background-color: black;
     color: white;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding-top: 20px; 
+    padding-bottom: 40px;
     box-shadow: 0px 0px 40px 10px rgba(18, 70, 5, 0.151);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 50px;
-    
+    align-items: center; 
 }
 
 
@@ -220,10 +247,63 @@ footer{
        background-color: rgba(40, 173, 40, 0.76);
  }
 
+
  .p-rodape{
     text-align: center;
     font-size: 18px;
-    margin: 0;
  }
 
 
+ /* Media Queries para Responsividade */
+@media (max-width: 768px) {
+
+     body{
+        background-position: center top;
+    } 
+
+    h1 {
+        font-size: 3em; /* Ajusta o tamanho do título */
+    }
+
+    h2 {
+        font-size: 2.5em; /* Ajusta o tamanho do subtítulo */
+    }
+
+    p {
+        font-size: 1em; /* Ajusta o tamanho do parágrafo */
+        padding: 20px; /* Ajusta o padding para telas menores */
+    }
+
+    button {
+        font-size: 1.2em; /* Ajusta o tamanho do botão */
+        margin: 20px auto; /* Centraliza o botão */
+        width: 50%; /* Botão ocupa 50% da largura */
+
+    }
+
+    nav {
+        flex-direction: row; 
+        align-items: center; 
+    }
+}
+
+
+.social-media {
+    margin-top: 10px; /* Ajuste a distância entre o rodapé e os ícones */
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+/* Estilizando os ícones das redes sociais */
+.social-icon {
+    color: white; /* Cor do ícone */
+    font-size: 28px; /* Tamanho do ícone */
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+/* Efeito hover nos ícones */
+.social-icon:hover {
+    transform: scale(1.2); /* Aumenta o tamanho no hover */
+    color: #743e1f; /* Troca a cor no hover */
+}
