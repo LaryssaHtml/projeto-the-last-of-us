@@ -161,7 +161,9 @@ strong{
     
 }
 
-
+main{
+    padding: 4px;
+}
 
 section > h1{
     font-family: 'Ellie', Arial, Helvetica, sans-serif;
