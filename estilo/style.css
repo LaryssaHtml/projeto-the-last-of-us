@@ -13,14 +13,14 @@
  
 
  body{ 
-    height: 100vh; /* 100% da Viewport*/
+    height: 100vh; /* 100% da Viewheight*/
     font-family: Arial, Helvetica, sans-serif;
     background-color: #2b3e33;
     background-image: url(../imagens/ellie-1920.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /*modificar*/ 
+    background-attachment: fixed; 
     
 }
 
@@ -28,26 +28,26 @@ html{
     scroll-behavior: smooth;
  }
 
- .scroll-to-top {
-    right: 50px; /* Distância da direita */
-}
-
 .scroll-to-top img {
-    width: 70px; 
+    width: 9%; 
     height: auto; 
 }
 
+div.container {
+     width: 100%;
+}
 
-div#img01{
-    background-image: url(../imagens/ellie-violao.jpg);
+
+div#img01 {
+    background-image: url(../imagens/violao-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-div#img02{
-    background-image: url(../imagens/ellie-window.png);
+div#img02 {
+    background-image: url(../imagens/floresta.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,6 +60,7 @@ div#img03{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; 
+    
 }
 
 div.video{
@@ -207,11 +208,11 @@ button{
     color: white;
     margin-left: 4%;
     border-radius: 10px;
-    transition: 1s;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
-    display: block; 
-    transition: transform 0.3s ease;
+    transition: 0.5s;
+
 }    
 
 button:hover{
@@ -227,6 +228,7 @@ a{
 
 article{
     padding-top: 80px;
+    width: 100%;
 }
 
 
@@ -259,31 +261,34 @@ footer{
 
      body{
         background-position: center top;
+        font-size: 10px;
     } 
 
     h1 {
-        font-size: 3em; /* Ajusta o tamanho do título */
+        font-size: 2em; /* Ajusta o tamanho do título */
     }
 
     h2 {
-        font-size: 2.5em; /* Ajusta o tamanho do subtítulo */
+        font-size: 2em; /* Ajusta o tamanho do subtítulo */
     }
 
     p {
-        font-size: 1em; /* Ajusta o tamanho do parágrafo */
+        font-size: 1.5em; /* Ajusta o tamanho do parágrafo */
         padding: 20px; /* Ajusta o padding para telas menores */
     }
 
     button {
         font-size: 1.2em; /* Ajusta o tamanho do botão */
-        margin: 20px auto; /* Centraliza o botão */
-        width: 50%; /* Botão ocupa 50% da largura */
+        display: block;
+        margin: auto; /* Centraliza o botão */
+        width: 60%; /* Botão ocupa 50% da largura */
 
     }
 
     nav {
         flex-direction: row; 
         align-items: center; 
+        font-size: 1em;
     }
 }
 
@@ -306,4 +311,26 @@ footer{
 .social-icon:hover {
     transform: scale(1.2); /* Aumenta o tamanho no hover */
     color: #743e1f; /* Troca a cor no hover */
+}
+
+.rating {
+    direction: ltr; 
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.star {
+    font-size: 24px; /* Tamanho da estrela */
+    color: lightgray; /* Cor padrão das estrelas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold; /* Cor das estrelas ao passar o mouse */
+}
+
+.star.selected {
+    color: gold; /* Cor das estrelas selecionadas */
 }
