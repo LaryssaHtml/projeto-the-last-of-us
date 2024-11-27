@@ -7,6 +7,18 @@
     <title>Login</title>
     <style>
 
+        @media (max-width: 768px) {
+
+            .corpo-cell {
+                font-size: 1em;
+                background-image: url('./imagens/ellie-cell10.jpg');
+            }
+
+            .celular {
+                font-size: 2em;
+             }
+        }    
+
         @font-face {
             font-family: 'Ellie';
             src: url(fontes/The\ Last\ Of\ Us\ Rough.ttf) format('truetype');
@@ -22,7 +34,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /*modificar*/ 
+            background-attachment: fixed; 
         }
          
 
@@ -32,17 +44,21 @@
             font-weight: normal;
             font-size: 5em;
             text-align: center;
+            width: 100%;
+            height: auto;
+            color: rgb(20, 20, 20);
         }
 
         p{
-            color: white;
+            color: rgba(0, 0, 0, 0.877);
+            font-weight: bold;
             font-size: 1.2em;
             text-align: center;
         }
          
 
         p > a{
-            color: white;
+            color: black;
             text-decoration: none;
         }
 
@@ -54,10 +70,10 @@
         }
     </style>
 </head>
-<body>
-    <h1>Oi Sobrevivente!</h1>
-    <p>Infelizmente essa aba não está disponível, <br>
-    é apenas um teste.Que pena :c </p>
+<body class="corpo-cell">
+    <h1 class="celular">Oi Sobrevivente!</h1>
+    <p>Infelizmente essa aba não está disponível,<br>
+    é apenas um teste. Que pena :c </p>
     <p><a href="index.html">Clique aqui para voltar</a></p>
 </body>
 </html>

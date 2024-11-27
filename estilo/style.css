@@ -38,7 +38,7 @@ div.container {
 }
 
 
-div#img01 {
+#img01 {
     background-image: url(../imagens/violao-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -46,15 +46,15 @@ div#img01 {
     background-size: cover;
 }
 
-div#img02 {
-    background-image: url(../imagens/floresta.jpg);
+#img02 {
+    background-image: url(../imagens/ellie-window.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-div#img03{
+#img03{
     background-image: url(../imagens/ellie-22.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -106,7 +106,7 @@ nav > a{
 nav > a:hover{
     background-color: #8f2220;
     color: rgb(0, 0, 0);
-    border-radius: 15px;          /*EDITE AQUI*/
+    border-radius: 15px;          
     transition-duration: 0.8s;
     transform: scale(1.1);
 }
@@ -158,7 +158,7 @@ section h2{
 
 strong{
     font-weight: bolder;
-    color: #317302;
+    color: #56c209;
     
 }
 
@@ -243,7 +243,6 @@ footer{
     align-items: center; 
 }
 
-
  footer > p > a:hover{
        text-decoration: underline;
        background-color: rgba(40, 173, 40, 0.76);
@@ -252,17 +251,54 @@ footer{
 
  .p-rodape{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
  }
 
 
  /* Media Queries para Responsividade */
 @media (max-width: 768px) {
 
-     body{
+     body {
+        background-image: url('../imagens/ellie-cell9.jpg');
         background-position: center top;
         font-size: 10px;
-    } 
+    }
+
+    .container {
+        visibility: visible;
+    }
+
+    .p-rodape {
+        font-size: 10px;
+    }
+
+    main {
+        box-shadow: 1px 20px 1px solid black;
+    }
+
+    section {
+        visibility: visible;
+    }
+
+    #img01, #img02, #img03 {
+       visibility: hidden;
+       display: block;
+    }
+
+    iframe {
+        visibility: visible;
+    }
+
+    img {
+        visibility: hidden;
+        width: 30px;
+        height: auto;
+    }
+
+    scroll-to-top, #seta-unica {
+        visibility: visible;
+    }
+
 
     h1 {
         font-size: 2em; /* Ajusta o tamanho do título */
@@ -275,20 +311,21 @@ footer{
     p {
         font-size: 1.5em; /* Ajusta o tamanho do parágrafo */
         padding: 20px; /* Ajusta o padding para telas menores */
+        visibility: visible;
     }
 
     button {
         font-size: 1.2em; /* Ajusta o tamanho do botão */
         display: block;
         margin: auto; /* Centraliza o botão */
-        width: 60%; /* Botão ocupa 50% da largura */
+        width: 50%; /* Botão ocupa 50% da largura */
 
     }
 
     nav {
         flex-direction: row; 
         align-items: center; 
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
